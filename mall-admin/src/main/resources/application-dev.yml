@@ -34,9 +34,10 @@ spring:
               key-generator-name: snowflake
         sharding-algorithms:
           order-sn-mod:
-            type: ORDER_SN_MOD
+            type: CLASS_BASED
             props:
-              sharding-count: 10
+              strategy: STANDARD
+              algorithm-class-name: com.macro.mall.common.sharding.OrderSnShardingAlgorithm
         key-generators:
           snowflake:
             type: SNOWFLAKE

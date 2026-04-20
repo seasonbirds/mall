@@ -74,7 +74,7 @@ public class OrderSnShardingAlgorithm implements StandardShardingAlgorithm<Strin
 
     @Override
     public String getType() {
-        return "ORDER_SN_MOD";
+        return "CLASS_BASED";
     }
 
     private int calculateShardingIndex(String orderSn) {
