@@ -68,12 +68,18 @@ public class OrderSnShardingAlgorithm implements StandardShardingAlgorithm<Strin
     }
 
     @Override
-    public void init() {
+    public void init(Properties props) {
+        this.props = props;
     }
 
     @Override
     public String getType() {
         return "CLASS_BASED";
+    }
+
+    @Override
+    public Properties getProps() {
+        return this.props;
     }
 
     private int calculateShardingIndex(String orderSn) {
