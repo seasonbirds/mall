@@ -68,8 +68,7 @@ public class OrderSnShardingAlgorithm implements StandardShardingAlgorithm<Strin
     }
 
     @Override
-    public void init(Properties props) {
-        this.props = props;
+    public void init() {
     }
 
     @Override
